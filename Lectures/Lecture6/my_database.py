@@ -1,6 +1,6 @@
 import datajoint as dj
 
-schema = dj.schema('homework2')
+schema = dj.schema('homework2')                                                                                                                                               
 
 schema.drop(True)
 schema = dj.schema('homework2')
@@ -21,7 +21,7 @@ class FlySubject(dj.Manual):
 @schema
 class Stimulus(dj.Manual):
     definition = """
-    # stimulus table
+    # stim                             ulus table
     stimulus_name : varchar(31) # short name for stimulus
     ---
     stimulus_type : enum('full-field', 'grating', 'movie')
@@ -32,7 +32,7 @@ class Stimulus(dj.Manual):
 @schema
 class RecordingSession(dj.Manual):
     definition = """
-    # record them sessions
+    # record the sessions
     -> FlySubject
     recording_id : int 
     ---
